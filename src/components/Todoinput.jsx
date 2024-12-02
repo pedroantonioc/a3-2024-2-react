@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+
 export default function TodoInput(props) {
     const { handleAddTodos, todoValue, setTodoValue } = props
     
@@ -13,6 +14,7 @@ export default function TodoInput(props) {
             <button onClick={() => {
                 handleAddTodos(todoValue)
                 setTodoValue('')
+                
             }}>Add</button>
         </header>
     )

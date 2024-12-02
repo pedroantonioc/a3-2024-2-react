@@ -11,6 +11,7 @@ export default function TodoCard(props) {
       
         <button onClick={() => {
           handleEditTodo(index)
+          
         }}>
           <i className="fa-solid fa-pen-to-square"></i>
         </button> 

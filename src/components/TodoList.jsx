@@ -1,6 +1,10 @@
 import React from 'react'
 import TodoCard from './TodoCard'
 
+
+//TodoList é o componente responsável por renderizar a lista no comoponente app
+
+
 export default function TodoList(props) {
 
   const{ todos } = props

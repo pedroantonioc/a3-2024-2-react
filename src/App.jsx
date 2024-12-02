@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react"
 import TodoInput from "./components/Todoinput"
 import TodoList from "./components/TodoList"
+import axios from 'axios'
+
+//tem que iniciar os servidores dos dois serviços, pois estão rodando em portas diferentes (do index e do getFromDatabase)
+
+//app é o componente principal da aplicação, ele é exportado no fim para o componente main que distribui as listas de cada dia na tela
+// 
 
 function App() {
   
@@ -17,7 +23,18 @@ function App() {
     const newTodoList = [...todos, newTodo]
     persistData(newTodoList)
     setTodos(newTodoList)
+    axios.post('http://localhost:5000/newTodo', {newTodo}) //joga o novo card para o back end (em .c/server/index.js)
+    
   }
+
+  //jogar o material do backend pros cards do front
+  useEffect(() => {
+    axios.get('http://localhost:5000/readTodo')
+    .then(res => {
+      console.log(res);
+      
+    })
+  }, [])
 
   function handleDeleteTodo(index) {
     const newTodoList = todos.filter((todo, todoIndex) => {
@@ -25,13 +42,24 @@ function App() {
     })
     persistData(newTodoList)
     setTodos(newTodoList)
+
+    
   }
 
-  function handleEditTodo(index) {
+  function handleEditTodo (index) {
     const valueToBeEdited = todos[index]
     setTodoValue(valueToBeEdited)
+    console.log(index) 
     handleDeleteTodo(index)
+    console.log(index) 
+   
   }
+
+  //const handleEditTodo2 = (id) => {
+  //  console.log(id);
+ // }
+
+  
 
   useEffect(() => {
     if (!localStorage) {

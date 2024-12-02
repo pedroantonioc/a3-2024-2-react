@@ -1,0 +1,18 @@
+Integrantes do grupo: 
+
+Pedro Antonio Gomes Carvalho - RA 822135414
+Victor Camargo Troici - RA 822132217
+
+
+Como subir o projeto? (considerando o node já instalado no seu computador)
+
+
+Baixe a pasta e abra no VS Code
+
+No arquivo index dentro da pasta server substitua os preenchedores da linha 14 a 17 pelos seus dados de banco de dados (host, user, password, database)
+
+Abra 2 terminais
+
+Digite em um deles o comando npm run dev, siga o link
+Digite no outro terminal o comando "node server index"
+
