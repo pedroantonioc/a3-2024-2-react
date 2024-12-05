@@ -13,7 +13,7 @@ apply.use(cors()) //cross- compartilhamento de recursos origem (permite o conte√
 const db = mysql.createConnection({
     host : 'localhost',
     user : 'root',
-    password : 'Digite aqui sua senha mysql', 
+    password : , 
     database : 'sys'
 })
 // testando se o banco de dados foi conectado

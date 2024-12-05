@@ -76,6 +76,16 @@ p {
   gap: 14px;
 }
 
+.iaItem {
+  display: flex;
+  align-items: center;
+  margin: 14px 0px;
+  gap: 14px;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgb(168, 212, 241);
+}
+
 .todoItem {
   display: flex;
   align-items: center;
@@ -85,8 +95,11 @@ p {
   background: white;
 }
 
+
+
 .todoItem p {
   flex: 1;
+  
 }
 
 .actionsContainer {

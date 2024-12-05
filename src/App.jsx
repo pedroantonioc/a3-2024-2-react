@@ -3,7 +3,7 @@ import TodoInput from "./components/Todoinput"
 import TodoList from "./components/TodoList"
 import axios from 'axios'
 
-//tem que iniciar os servidores dos dois serviços, pois estão rodando em portas diferentes (do index e do getFromDatabase)
+
 
 //app é o componente principal da aplicação, ele é exportado no fim para o componente main que distribui as listas de cada dia na tela
 // 

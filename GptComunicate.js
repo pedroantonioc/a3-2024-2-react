@@ -8,11 +8,13 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY, // chave da api
 });
 
+
+
 // função assíncrona para fazer a chamada da api
 async function principal() {
     try {
         const chatCompletion = await openai.chat.completions.create({
-            model: 'gpt-3.5-turbo', 
+            model: 'gpt-3.5', 
             messages: [
                 {
                     role: 'user', 
